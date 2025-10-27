@@ -17,9 +17,24 @@ message BookId {
 
 message Empty {}
 
+message AddBookRequest {
+  string id = 1;
+  string title = 2;
+  string author = 3;
+  int32 year = 4;
+}
+
+message AddBookResponse {
+  bool success = 1;
+}
+
+message GetBookResponse {
+  Book book = 1;
+}
+
 service BookService {
-  rpc AddBook(Book) returns (Empty);
-  rpc GetBook(BookId) returns (Book);
+  rpc AddBook(AddBookRequest) returns (AddBookResponse);
+  rpc GetBook(BookId) returns (GetBookResponse);
   rpc UpdateBook(Book) returns (Empty);
   rpc DeleteBook(BookId) returns (Empty);
   rpc ListBooks(Empty) returns (stream Book);
