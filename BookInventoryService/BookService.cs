@@ -7,8 +7,10 @@ namespace BookInventoryService.Services
 {
     public class BookServiceImpl : BookService.BookServiceBase
     {
-        private readonly ConcurrentDictionary<string, Book> _books = new();
-
+        private static readonly ConcurrentDictionary<string, Book> _books = new();
+        //private readonly ConcurrentDictionary<string, Book> _books = new();
+        //private static readonly Dictionary<int, Book> books = new();
+        
         public override Task<Empty> AddBook(Book request, ServerCallContext context)
         {
             _books[request.Id] = request;
