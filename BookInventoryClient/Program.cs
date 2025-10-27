@@ -41,8 +41,10 @@ class Program
                         break;
                     }
 
-                    var newBook = new Book { Id = id, Title = title, Author = author, PublicationYear = year };
-                    await client.AddBookAsync(newBook);
+                  //  var newBook = new Book { Id = id, Title = title, Author = author, PublicationYear = year };
+                  //  await client.AddBookAsync(newBook);
+                    var newBookRequest = new AddBookRequest { Id = id, Title = title, Author = author, Year = year };
+		    await client.AddBookAsync(newBookRequest);
                     Console.WriteLine("Book added.");
                     break;
 
@@ -51,8 +53,11 @@ class Program
                     var getId = Console.ReadLine();
                     try
                     {
-                        var book = await client.GetBookAsync(new BookId { Id = getId });
-                        Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Year: {book.PublicationYear}");
+                     //   var book = await client.GetBookAsync(new BookId { Id = getId });
+                     //   Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Year: {book.PublicationYear}");
+var response = await client.GetBookAsync(new BookId { Id = getId });
+var book = response.Book;
+Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Year: {book.PublicationYear}");
                     }
                     catch (RpcException ex)
                     {

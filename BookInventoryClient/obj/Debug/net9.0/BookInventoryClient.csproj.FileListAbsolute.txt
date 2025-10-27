@@ -19,3 +19,4 @@ C:\Node\GitPort\dev422_fall_2025\BookInventoryClient\obj\Debug\net9.0\refint\Boo
 C:\Node\GitPort\dev422_fall_2025\BookInventoryClient\obj\Debug\net9.0\BookInventoryClient.pdb
 C:\Node\GitPort\dev422_fall_2025\BookInventoryClient\obj\Debug\net9.0\BookInventoryClient.genruntimeconfig.cache
 C:\Node\GitPort\dev422_fall_2025\BookInventoryClient\obj\Debug\net9.0\ref\BookInventoryClient.dll
+C:\Node\GitPort\dev422_fall_2025\BookInventoryClient\obj\Debug\net9.0\BookInventoryClient.sourcelink.json

@@ -9,19 +9,19 @@ namespace BookInventoryService.Services
     {
         private static readonly ConcurrentDictionary<string, Book> _books = new();
 
-        public override Task<AddBookResponse> AddBook(AddBookRequest request, ServerCallContext context)
-        {
-            var book = new Book
-            {
-                Id = request.Id,
-                Title = request.Title,
-                Author = request.Author,
-                Year = request.Year
-            };
+public override Task<AddBookResponse> AddBook(AddBookRequest request, ServerCallContext context)
+{
+    var book = new Book
+    {
+        Id = request.Id,
+        Title = request.Title,
+        Author = request.Author,
+        PublicationYear = request.Year
+    };
 
-            _books[book.Id] = book;
-            return Task.FromResult(new AddBookResponse { Success = true });
-        }
+    _books[book.Id] = book;
+    return Task.FromResult(new AddBookResponse { Success = true });
+}
 
         public override Task<GetBookResponse> GetBook(BookId request, ServerCallContext context)
         {

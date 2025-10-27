@@ -46,27 +46,33 @@ namespace BookInventory {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BookInventory.AddBookRequest> __Marshaller_bookinventory_AddBookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.AddBookRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BookInventory.AddBookResponse> __Marshaller_bookinventory_AddBookResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.AddBookResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BookInventory.BookId> __Marshaller_bookinventory_BookId = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.BookId.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::BookInventory.GetBookResponse> __Marshaller_bookinventory_GetBookResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.GetBookResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::BookInventory.Book> __Marshaller_bookinventory_Book = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.Book.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::BookInventory.Empty> __Marshaller_bookinventory_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.Empty.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::BookInventory.BookId> __Marshaller_bookinventory_BookId = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::BookInventory.BookId.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::BookInventory.Book, global::BookInventory.Empty> __Method_AddBook = new grpc::Method<global::BookInventory.Book, global::BookInventory.Empty>(
+    static readonly grpc::Method<global::BookInventory.AddBookRequest, global::BookInventory.AddBookResponse> __Method_AddBook = new grpc::Method<global::BookInventory.AddBookRequest, global::BookInventory.AddBookResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AddBook",
-        __Marshaller_bookinventory_Book,
-        __Marshaller_bookinventory_Empty);
+        __Marshaller_bookinventory_AddBookRequest,
+        __Marshaller_bookinventory_AddBookResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::BookInventory.BookId, global::BookInventory.Book> __Method_GetBook = new grpc::Method<global::BookInventory.BookId, global::BookInventory.Book>(
+    static readonly grpc::Method<global::BookInventory.BookId, global::BookInventory.GetBookResponse> __Method_GetBook = new grpc::Method<global::BookInventory.BookId, global::BookInventory.GetBookResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetBook",
         __Marshaller_bookinventory_BookId,
-        __Marshaller_bookinventory_Book);
+        __Marshaller_bookinventory_GetBookResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::BookInventory.Book, global::BookInventory.Empty> __Method_UpdateBook = new grpc::Method<global::BookInventory.Book, global::BookInventory.Empty>(
@@ -126,42 +132,42 @@ namespace BookInventory {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::BookInventory.Empty AddBook(global::BookInventory.Book request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::BookInventory.AddBookResponse AddBook(global::BookInventory.AddBookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddBook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::BookInventory.Empty AddBook(global::BookInventory.Book request, grpc::CallOptions options)
+      public virtual global::BookInventory.AddBookResponse AddBook(global::BookInventory.AddBookRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AddBook, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::BookInventory.Empty> AddBookAsync(global::BookInventory.Book request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::BookInventory.AddBookResponse> AddBookAsync(global::BookInventory.AddBookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddBookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::BookInventory.Empty> AddBookAsync(global::BookInventory.Book request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::BookInventory.AddBookResponse> AddBookAsync(global::BookInventory.AddBookRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddBook, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::BookInventory.Book GetBook(global::BookInventory.BookId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::BookInventory.GetBookResponse GetBook(global::BookInventory.BookId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::BookInventory.Book GetBook(global::BookInventory.BookId request, grpc::CallOptions options)
+      public virtual global::BookInventory.GetBookResponse GetBook(global::BookInventory.BookId request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBook, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::BookInventory.Book> GetBookAsync(global::BookInventory.BookId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::BookInventory.GetBookResponse> GetBookAsync(global::BookInventory.BookId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::BookInventory.Book> GetBookAsync(global::BookInventory.BookId request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::BookInventory.GetBookResponse> GetBookAsync(global::BookInventory.BookId request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBook, null, options, request);
       }
